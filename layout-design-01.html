@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-Desing-01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --primary-color: green;
+            --secondary-color: tomato; 
+        }
+
+        .header{grid-area: header;
+        background-color:var(--primary-color);
+        z-index: 1;
+        
+        
+        }
+        .navbar{grid-area: navbar;
+        background-color: var(--secondary-color);
+        transition: width 2s;
+        z-index: 2;
+        
+        
+        }
+        .section{grid-area: section;
+        background-color: aquamarine;
+        z-index: 3;
+        }
+        .summary{grid-area: summary;
+        background-color: bisque;
+        z-index: 4;
+        }
+        .article{grid-area: article;
+        background-color: blueviolet;
+        background-color: brown;
+        z-index: 5;
+        }
+        .aside{grid-area: aside;
+        background-color: cadetblue;
+        z-index: 6;
+        }
+        .footer{grid-area: footer;
+        background-color: chartreuse;
+    }
+        
+
+        .container-div{
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            margin: 5px;
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header header'
+            'navbar navbar navbar navbar navbar navbar navbar'
+            'section section section section section aside aside '
+            'summary summary summary summary summary aside aside'
+            'article article article article article aside aside'
+            'footer footer footer footer footer footer footer';
+        
+        }
+
+        .container-div div{
+            padding: 10px;
+            border: 2px solid rgb(4, 57, 219);
+            align-content: center;
+            text-align: center;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: justify;
+            font-size: 1.5rem;
+            box-shadow: 5px 5px black;
+
+        }
+        
+        h1{
+            text-align: center;
+        }
+
+
+@media screen and (max-width: 600px)
+{
+    .container-div{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container-div">
+        <div class="header">
+            <h1>Header</h1>
+            <p>This element is used as a introductory section of your webpage. It typically contains the site's logo, navigation menu, and essential branding elements.</p>
+        </div>
+        <div class="navbar">
+            <h1>Navbar</h1>
+            <p>Within the elsewhere on your page, theelement is used for navigation menus. It helps users find their way around your site, enhancing user experience. <span><details>Comming Soon</details></span> </p>
+        </div>
+        <div class="section">
+            <h1>Section</h1>
+            <p>This element divides your content into thematic sections, making it easier to organize and style. It's a fundamental building block for structuring your web page.</p></div>
+        <div class="summary">
+            <h1>summary</h1>
+            <p>This pair of elements creates interactive disclosure widgets. When a user clicks the element, it expands or collapses the content wrapped in the <details> element. It's handy for creating expandable FAQ sections or hiding additional information until needed.
+                By mastering these HTML layout elements, you can create web pages that are not only visually appealing but also well-structured and easy to navigate. This is not only beneficial for your users but also for search engine optimization (SEO) as these elements help search engines understand your content's hierarchy.
+                Remember, modern web design is about more than just aesthetics; it's about creating a seamless user experience. HTML layout elements play a pivotal role in achieving that goal. So, whether you're a seasoned web developer or just starting your journey, make sure to harness the power of these elements to craft compelling and user-friendly websites.</p>
+        
+        </div>
+        <div class="article">
+            <h1>Article</h1>
+        <p> If you have standalone content, such as blog posts, news articles, or product descriptions, the element is your go-to choice. It helps search engines and screen readers understand the importance of your content.</p>
+        </div>
+        <div class="aside">
+            <h1>Aside</h1>
+            <p>The element complements the main content but isn't essential to the understanding of the page. It's often used for sidebars, advertisements, or related links.</p>
+        </div>
+        <div class="footer">
+            <h1>Footer</h1>
+            <p> At the bottom of your webpage, the element provides important information such as copyright notices, contact details, and links to privacy policies. It anchors your page effectively.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
